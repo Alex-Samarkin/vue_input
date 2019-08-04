@@ -1,0 +1,8 @@
+html,
+body {
+  margin: 5px;
+  padding: 2px;
+}
+#header1 {
+  background-color: bisque;
+}
