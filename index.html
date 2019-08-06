@@ -11,7 +11,15 @@
     <div id="app">
       {{ message }}
 
-      {{ jsn }}
+      <div v-for="(item, id) in jsn" :key="id">
+        <hr />
+        <p>{{ item.id }}</p>
+        <p>{{ item.f_name }} {{ item.i_name }} {{ item.o_name }}</p>
+        <p>{{ item.Y }}</p>
+        <p>{{ item.address }}</p>
+        <p>{{ item.phones }}</p>
+        <hr />
+      </div>
     </div>
 
     <script src="index.js"></script>
