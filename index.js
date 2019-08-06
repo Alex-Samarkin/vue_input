@@ -3,6 +3,9 @@ var app = new Vue({
   data: function () {
     return {
       message: "Здравствуйте, Александр Иванович! Как у вас дела?",
+      checked: false,
+      picked: "Один",
+      selected: "А",
       jsn: [{
           "id": 1,
           "f_name": "Иванов",

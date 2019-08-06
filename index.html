@@ -10,8 +10,30 @@
 
     <div id="app">
       {{ message }}
-    </p>
+      <br />
       <input v-model="message" />
+      <br />
+      <input type="checkbox" id="checkbox" v-model="checked" />
+      <label for="checkbox">{{ checked }}</label>
+      <br />
+
+      <input type="radio" id="one" value="Один" v-model="picked" />
+      <label for="one">Один</label>
+      <br />
+      <input type="radio" id="two" value="Два" v-model="picked" />
+      <label for="two">Два</label>
+      <br />
+      <span>Выбрано: {{ picked }}</span>
+
+      <br />
+      <select v-model="selected">
+        <option disabled value="">Выберите один из вариантов</option>
+        <option>А</option>
+        <option>Б</option>
+        <option>В</option>
+      </select>
+
+      <span>Выбрано: {{ selected }}</span>
 
       <div v-for="(item, id) in jsn" :key="id">
         <hr />
@@ -22,7 +44,7 @@
           <input v-model="item.i_name" />
           <input v-model="item.o_name" />
         </p>
-        <p>{{ item.f_name }} {{ item.i_name }} {{ item.o_name }} </p>
+        <p>{{ item.f_name }} {{ item.i_name }} {{ item.o_name }}</p>
         <p>{{ item.Y }}</p>
         <p>{{ item.address }}</p>
         <p>{{ item.phones }}</p>
