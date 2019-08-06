@@ -16,7 +16,13 @@
       <div v-for="(item, id) in jsn" :key="id">
         <hr />
         <p>{{ item.id }}</p>
-        <p>{{ item.f_name }} {{ item.i_name }} {{ item.o_name }}</p>
+        <p><input v-model="item.id" /></p>
+        <p>
+          <input v-model="item.f_name" />
+          <input v-model="item.i_name" />
+          <input v-model="item.o_name" />
+        </p>
+        <p>{{ item.f_name }} {{ item.i_name }} {{ item.o_name }} </p>
         <p>{{ item.Y }}</p>
         <p>{{ item.address }}</p>
         <p>{{ item.phones }}</p>
